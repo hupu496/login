@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block content %}
+       {% if user.is_authenticated %}
+        <h1>Welcome,{{user.username}}</h1>
+        <nav class="nav">
+          <a class="nav" href="{% url 'logout' %}">
+          <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Logout
+          </a>
+        </nav>
+        {% endif %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+ <h3>Warning</h3>
+<p>warning!!! your otp check limit is exceed</p>
+  <form method="POST" >
+      {% csrf_token %}
+      <br>
+      <br>
+        <a href="{% url 'email_request' %}">request again</a>
+  </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+ <h3>Successfully!!!</h3>
+<p>your password is reset sucessfully</p>
+  <form method="POST" >
+      {% csrf_token %}
+      <br>
+      <br>
+        <a href="{% url 'login' %}">Again login</a>
+  </form>
+{% endblock %}

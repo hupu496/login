@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+<h3>email request</h3>
+  <form method="POST" >
+      {% csrf_token %}
+  username:<br>
+  <input type="username" name="username">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+   <a href="{% url 'password_reset' %}"></a>
+</form>
+ {% for message in messages %}
+<p id="messgae">{{message}}</p>
+{% endfor %}
+{% endblock %}
